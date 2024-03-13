@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perdón</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .cartel {
+      display: inline-block;
+      font-size: 24px;
+      padding: 20px;
+      margin: 20px;
+      cursor: pointer;
+      border: 2px solid black;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    .mensaje {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="perdoname" class="cartel" onclick="cambiarCarteles()">Por favor, perdóname</div>
+    <div id="teperdono" class="cartel oculto" onclick="mostrarMensaje()">Sí, te perdono</div>
+    <div id="mensaje" class="mensaje oculto">Te amo, mi vida</div>
+  </div>
+  <script>
+    function cambiarCarteles() {
+      var perdoname = document.getElementById("perdoname");
+      var teperdono = document.getElementById("teperdono");
+
+      perdoname.style.fontSize = "20px";
+      perdoname.style.display = "none";
+      teperdono.style.display = "inline-block";
+    }
+
+    function mostrarMensaje() {
+      var mensaje = document.getElementById("mensaje");
+      mensaje.style.display = "block";
+    }
+  </script>
+</body>
+</html>
